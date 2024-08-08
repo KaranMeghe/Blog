@@ -9,7 +9,7 @@ export class Service {
   constructor() {
     this.client
       .setEndpoint(config.appWriteUrl)
-      .setProject(config.appWiteProjectId);
+      .setProject(config.appWriteProjectId);
 
     this.databases = new Databases(this.client);
     this.storage = new Storage(this.client);

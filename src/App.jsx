@@ -1,9 +1,17 @@
 import "./index.css";
+import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { Header, Footer } from "./components/index";
+import { login, logout } from "./redux/slices/authSlice";
+import authService from "./appWrite/auth";
+
 function App() {
-  console.log(import.meta.env.VITE_APP_APPWRITE_URL);
+  const [loading, setLoading] = useState(true);
+  // const dispatch = useDispatch();
   return (
     <>
-      <h1>React Blog App</h1>
+      <Header />
+      <Footer />
     </>
   );
 }
